@@ -1,0 +1,15 @@
+{
+    "models": {
+        "claude": {
+            "base_url": "https://api.anthropic.com",
+            "api_key": "your-api-key-here"
+        }
+    },
+    "paths": {
+        "pdf_dir": "pdfs/",
+        "excel_dir": "excels/"
+    },
+    "excel": {
+        "default_filename": "bankStaments.xlsx"
+    }
+}
