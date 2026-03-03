@@ -75,4 +75,4 @@ class JsonToExcelRowValue:
          return dealed_json_list
       except Exception as e:
          print(f"错误：{e}")
-         raise Exception(f"发生错误：{e}")
+         raise Exception(f"发生错误：{e}") from e
