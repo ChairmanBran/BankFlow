@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Data": {
+            "type": "array",
+            "description": "包含本页PDF所有交易的列表。必须根据字段完整记录PDF中的每条交易。忽略PDF头部可能存在的公章信息、户名开户行等抬头信息。",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "记账日期": {
+                        "type": "string", 
+                        "description": "PDF中「记账日期」字段对应的内容。"
+                    },
+                    "交易金额": {
+                        "type": "string", 
+                        "description": "PDF中「交易金额」字段对应的内容。"
+                    },
+                    "联机余额": {
+                        "type": "string", 
+                        "description": "PDF中「联机余额」字段对应的内容。"
+                    },
+                    "交易摘要": {
+                        "type": "string", 
+                        "description": "PDF中「交易摘要」字段对应的内容。"
+                    },
+                    "对手信息": {
+                        "type": "string", 
+                        "description": "PDF中「对手信息」字段对应的内容。"
+                    }
+                },
+                "required": ["记账日期", "交易金额", "联机余额", "交易摘要", "对手信息"]
+            }
+        }
+    },
+    "required": ["Data"]
+}
